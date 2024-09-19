@@ -1,0 +1,41 @@
+import java.util.*;
+
+public class Main extends Thread {
+    
+    private int valorMax;
+    private String nombre;
+    private int valor;
+    private static int milis = 100;
+    
+     @Override
+    public void run(){
+        for (this.valor = valorMax; valor >= 0; valor--){
+            
+            System.out.println(this);
+            try {
+            Thread.sleep(milis);
+            
+            }catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+        
+    }
+    public String toString() {
+        return "Contador{" +"valorMaximo=" + valorMax + ", nombre='" + nombre + ' ' +  valor + '}';
+    }
+    public Main(int valorMax, String nombre){
+        this.valorMax = valorMax;
+        this.nombre = nombre;
+    }
+    
+    public static void main(String[] args) throws Exception {
+        Main m1 = new Main(8, "Mondongo");
+        Main m2 = new Main(3, "Bombardeen la Ceu");
+        m1.start();
+        m2.start();
+        
+    
+    }
+    
+}
