@@ -1,0 +1,48 @@
+import java.util.*;
+
+public class Main implements Runnable {
+    
+    private int valorMax;
+    private String nombre;
+    private int valor;
+    private static int milis = 1;
+    private static long contador = 0;
+    private static long contadorRun = 0;
+    
+     @Override
+    public void run(){
+        contador++;
+        contadorRun++;
+        for (this.valor = valorMax; valor >= 0; valor--){
+            
+            System.out.println(this);
+           
+            try {
+            Thread.sleep((milis * 300) / 10);
+            
+            }catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+      
+    }
+    public String toString() {
+        return "{" + "valorMaximo =" +  valorMax + ", nombre " + nombre + " "  +  valor + "}";
+    }
+    public Main(int valorMax, String nombre){
+        this.valorMax = valorMax;
+        this.nombre = nombre;
+    }
+    
+    public static void main(String[] args) throws Exception {
+        Main m1 = new Main(10, "Mondongo");
+        for (int i = 100; i >= 0; i--) {
+            new Thread(m1).start();
+        }
+        System.out.println("Run = " + contadorRun);
+        System.out.println("El otro contador = " + contador);
+
+    
+    }
+    
+}
