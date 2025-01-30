@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename field &apos;server&apos; in &apos;sockets02.SocketServerAdivinanza&apos; to &apos;serverSocket&apos;&#x0D;&#x0A;- Original project: &apos;SocketsPruebas&apos;&#x0D;&#x0A;- Original element: &apos;sockets02.SocketServerAdivinanza.server&apos;&#x0D;&#x0A;- Renamed element: &apos;sockets02.SocketServerAdivinanza.serverSocket&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" delegate="false" deprecate="false" description="Rename field &apos;server&apos;" flags="589826" getter="false" id="org.eclipse.jdt.ui.rename.field" input="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;sockets02{SocketServerAdivinanza.java[SocketServerAdivinanza^server" name="serverSocket" references="true" setter="false" stamp="1734026731316" textual="false" version="1.0"/>
+</session>
